@@ -11,6 +11,7 @@
 		817E040B2D3DEE9F00822E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817E04062D3DEE9F00822E2C /* Assets.xcassets */; };
 		817E040C2D3DEE9F00822E2C /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E04072D3DEE9F00822E2C /* CalculatorView.swift */; };
 		817E040D2D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E04082D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift */; };
+		817E04112D3DF50D00822E2C /* PhotoRadarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E04102D3DF50D00822E2C /* PhotoRadarResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		817E04062D3DEE9F00822E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		817E04072D3DEE9F00822E2C /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		817E04082D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedingFineCalculatorApp.swift; sourceTree = "<group>"; };
+		817E04102D3DF50D00822E2C /* PhotoRadarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRadarResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				817E04082D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift */,
+				817E040F2D3DF4EB00822E2C /* Model */,
 				817E040E2D3DEEA500822E2C /* Views */,
 				817E04052D3DEE9F00822E2C /* Preview Content */,
 				817E04062D3DEE9F00822E2C /* Assets.xcassets */,
@@ -73,6 +76,14 @@
 				817E04072D3DEE9F00822E2C /* CalculatorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		817E040F2D3DF4EB00822E2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				817E04102D3DF50D00822E2C /* PhotoRadarResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817E04112D3DF50D00822E2C /* PhotoRadarResult.swift in Sources */,
 				817E040C2D3DEE9F00822E2C /* CalculatorView.swift in Sources */,
 				817E040D2D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift in Sources */,
 			);
