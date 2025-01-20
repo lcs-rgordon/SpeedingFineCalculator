@@ -86,6 +86,18 @@ struct CalculatorView: View {
             return
         }
         
+        // Ensure speed limit is more than zero
+        guard speedLimit > 0 else {
+            result = "Please provide a speed limit greater than zero."
+            return
+        }
+        
+        // Ensure speed of car is not negative
+        guard speedOfCar >= 0 else {
+            result = "Please provide a non-negative speed for the car."
+            return
+        }
+        
     }
     
     func reset() {
