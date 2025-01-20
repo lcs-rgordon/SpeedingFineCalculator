@@ -98,6 +98,20 @@ struct CalculatorView: View {
             return
         }
         
+        // How far over the limit is the car going?
+        let amountOverLimit = speedOfCar - speedLimit
+        
+        // Determine the appropriate output message
+        if amountOverLimit > 30 {
+            result = "You are speeding and your fine is $500."
+        } else if amountOverLimit > 20 {
+            result = "You are speeding and your fine is $270."
+        } else if amountOverLimit > 0 {
+            result = "You are speeding and your fine is $100."
+        } else {
+            result = "Congratulations, you are within the speed limit!"
+        }
+        
     }
     
     func reset() {
