@@ -73,9 +73,18 @@ struct CalculatorView: View {
     
     // MARK: Functions
     func calculateResult() {
-        
-        // Just testing output
-        result = "Just testing!"
+
+        // Ensure speed limit provided is an integer
+        guard let speedLimit = Int(givenSpeedLimit) else {
+            result = "Please provide an integer value for the speed limit."
+            return
+        }
+
+        // Ensure speed of the car is an integer
+        guard let speedOfCar = Int(givenSpeedOfCar) else {
+            result = "Please provide an integer value for the speed of the car."
+            return
+        }
         
     }
     
