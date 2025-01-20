@@ -63,11 +63,8 @@ struct CalculatorView: View {
                     .font(.title)
                     .padding(.bottom, 10)
                 
-                VStack {
-                    Text(feedback)
-                    Spacer()
-                }
-                .frame(height: 30)
+                Text(feedback)
+                    .frame(height: 45)
 
                 Text("History")
                     .font(.title)
