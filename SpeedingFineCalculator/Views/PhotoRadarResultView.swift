@@ -31,10 +31,10 @@ struct PhotoRadarResultView: View {
             Text(resultToShow.result)
                 .italic()
         }
-        .padding()
     }
 }
 
 #Preview {
     PhotoRadarResultView(resultToShow: exampleResult)
+        .padding(.horizontal)
 }

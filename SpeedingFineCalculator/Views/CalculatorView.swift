@@ -15,8 +15,11 @@ struct CalculatorView: View {
     @State var givenSpeedLimit = ""
     @State var givenSpeedOfCar = ""
     
-    // For showing output values
-    @State var result = ""
+    // For showing feedback about input
+    @State var feedback = ""
+    
+    // For showing the list of previous calculations
+    @State var priorResults: [PhotoRadarResult] = []
     
     // MARK: Computed properties
     var body: some View {
@@ -60,7 +63,19 @@ struct CalculatorView: View {
                     .font(.title)
                     .padding(.bottom, 10)
                 
-                Text(result)
+                VStack {
+                    Text(feedback)
+                    Spacer()
+                }
+                .frame(height: 30)
+
+                Text("History")
+                    .font(.title)
+
+                List(priorResults.reversed()) { currentResult in
+                    PhotoRadarResultView(resultToShow: currentResult)
+                }
+                .listStyle(.plain)
                 
                 Spacer()
                 
@@ -76,25 +91,25 @@ struct CalculatorView: View {
 
         // Ensure speed limit provided is an integer
         guard let speedLimit = Int(givenSpeedLimit) else {
-            result = "Please provide an integer value for the speed limit."
+            feedback = "Please provide an integer value for the speed limit."
             return
         }
 
         // Ensure speed of the car is an integer
         guard let speedOfCar = Int(givenSpeedOfCar) else {
-            result = "Please provide an integer value for the speed of the car."
+            feedback = "Please provide an integer value for the speed of the car."
             return
         }
         
         // Ensure speed limit is more than zero
         guard speedLimit > 0 else {
-            result = "Please provide a speed limit greater than zero."
+            feedback = "Please provide a speed limit greater than zero."
             return
         }
         
         // Ensure speed of car is not negative
         guard speedOfCar >= 0 else {
-            result = "Please provide a non-negative speed for the car."
+            feedback = "Please provide a non-negative speed for the car."
             return
         }
         
@@ -103,14 +118,22 @@ struct CalculatorView: View {
         
         // Determine the appropriate output message
         if amountOverLimit > 30 {
-            result = "You are speeding and your fine is $500."
+            feedback = "You are speeding and your fine is $500."
         } else if amountOverLimit > 20 {
-            result = "You are speeding and your fine is $270."
+            feedback = "You are speeding and your fine is $270."
         } else if amountOverLimit > 0 {
-            result = "You are speeding and your fine is $100."
+            feedback = "You are speeding and your fine is $100."
         } else {
-            result = "Congratulations, you are within the speed limit!"
+            feedback = "Congratulations, you are within the speed limit!"
         }
+        
+        // Save result to list of previous results
+        let newPhotoRadarResult = PhotoRadarResult(
+            speedOfCar: speedOfCar,
+            speedLimit: speedLimit,
+            result: feedback
+        )
+        priorResults.append(newPhotoRadarResult)
         
     }
     
@@ -119,7 +142,7 @@ struct CalculatorView: View {
         // Get ready to calculate another result
         givenSpeedLimit = ""
         givenSpeedOfCar = ""
-        result = ""
+        feedback = ""
         
     }
     
