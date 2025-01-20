@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct CalculatorView: View {
+    
+    // MARK: Stored properties
+    @State var givenSpeedLimit = ""
+    @State var givenSpeedOfCar = ""
+    
+    // MARK: Computed properties
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack(alignment: .leading) {
+                Text("Inputs")
+                    .font(.title)
+                TextField("Speed limit (km/h)", text: $givenSpeedOfCar)
+                    .textFieldStyle(.roundedBorder)
+                TextField("Speed of car (km/h)", text: $givenSpeedOfCar)
+                    .textFieldStyle(.roundedBorder)
+                Spacer()
+            }
+            .padding()
+            .navigationTitle("Speeding Calculator")
         }
-        .padding()
     }
 }
 
