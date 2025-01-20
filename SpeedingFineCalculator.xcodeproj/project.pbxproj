@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		817E040A2D3DEE9F00822E2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817E04042D3DEE9F00822E2C /* Preview Assets.xcassets */; };
+		817E040B2D3DEE9F00822E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817E04062D3DEE9F00822E2C /* Assets.xcassets */; };
+		817E040C2D3DEE9F00822E2C /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E04072D3DEE9F00822E2C /* CalculatorView.swift */; };
+		817E040D2D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E04082D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		817E03F32D3DEE7100822E2C /* SpeedingFineCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedingFineCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		817E04042D3DEE9F00822E2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		817E04062D3DEE9F00822E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		817E04072D3DEE9F00822E2C /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		817E04082D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedingFineCalculatorApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		817E03F52D3DEE7100822E2C /* SpeedingFineCalculator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SpeedingFineCalculator;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		817E03F02D3DEE7100822E2C /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		817E03EA2D3DEE7100822E2C = {
 			isa = PBXGroup;
 			children = (
-				817E03F52D3DEE7100822E2C /* SpeedingFineCalculator */,
+				817E04092D3DEE9F00822E2C /* SpeedingFineCalculator */,
 				817E03F42D3DEE7100822E2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,33 @@
 				817E03F32D3DEE7100822E2C /* SpeedingFineCalculator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		817E04052D3DEE9F00822E2C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				817E04042D3DEE9F00822E2C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		817E04092D3DEE9F00822E2C /* SpeedingFineCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				817E04082D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift */,
+				817E040E2D3DEEA500822E2C /* Views */,
+				817E04052D3DEE9F00822E2C /* Preview Content */,
+				817E04062D3DEE9F00822E2C /* Assets.xcassets */,
+			);
+			path = SpeedingFineCalculator;
+			sourceTree = "<group>";
+		};
+		817E040E2D3DEEA500822E2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				817E04072D3DEE9F00822E2C /* CalculatorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +89,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				817E03F52D3DEE7100822E2C /* SpeedingFineCalculator */,
 			);
 			name = SpeedingFineCalculator;
 			packageProductDependencies = (
@@ -109,6 +136,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817E040A2D3DEE9F00822E2C /* Preview Assets.xcassets in Resources */,
+				817E040B2D3DEE9F00822E2C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817E040C2D3DEE9F00822E2C /* CalculatorView.swift in Sources */,
+				817E040D2D3DEE9F00822E2C /* SpeedingFineCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

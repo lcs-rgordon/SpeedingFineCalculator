@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CalculatorView.swift
 //  SpeedingFineCalculator
 //
 //  Created by Russell Gordon on 2025-01-19.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CalculatorView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CalculatorView()
 }
