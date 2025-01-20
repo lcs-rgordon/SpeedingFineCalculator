@@ -25,20 +25,36 @@ struct CalculatorView: View {
                 
                 Text("Input")
                     .font(.title)
-                TextField("Speed limit (km/h)", text: $givenSpeedOfCar)
+                TextField("Speed limit (km/h)", text: $givenSpeedLimit)
                     .textFieldStyle(.roundedBorder)
                 TextField("Speed of car (km/h)", text: $givenSpeedOfCar)
                     .textFieldStyle(.roundedBorder)
                 
                 Text("Process")
                     .font(.title)
-                Button {
-                    calculateResult()
-                } label: {
-                    Text("Determine result")
+
+                HStack {
+                    
+                    Button {
+                        calculateResult()
+                    } label: {
+                        Text("Determine result")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding(.bottom)
+
+                    Spacer()
+                    
+                    Button {
+                        reset()
+                    } label: {
+                        Text("Reset")
+                    }
+                    .tint(.red)
+                    .buttonStyle(.borderedProminent)
+                    .padding(.bottom)
+                    
                 }
-                .buttonStyle(.borderedProminent)
-                .padding(.bottom)
                 
                 Text("Output")
                     .font(.title)
@@ -60,6 +76,15 @@ struct CalculatorView: View {
         
         // Just testing output
         result = "Just testing!"
+        
+    }
+    
+    func reset() {
+        
+        // Get ready to calculate another result
+        givenSpeedLimit = ""
+        givenSpeedOfCar = ""
+        result = ""
         
     }
     
