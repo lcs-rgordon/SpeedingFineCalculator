@@ -9,6 +9,7 @@ import Foundation
 
 struct PhotoRadarResult: Identifiable {
     
+    // MARK: Stored properties
     let id = UUID()
     let speedOfCar: Int
     let speedLimit: Int
